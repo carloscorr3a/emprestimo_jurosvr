@@ -12,17 +12,17 @@ inicio
 
 
 
-        escreval("Em quantas parcelas? ")
+        escreval("Em quantas parcelas? [1-12]")
         leia(parcela)
         
-        se (parcela <= 5) entao
+        se (parcela <= 4) entao
            empresjurosvr <- empresjurosfx
         senao
-          se (parcela >= 6) ou (parcela <= 10) entao
+          se (parcela >= 5) e (parcela <= 9) entao
              empresjurosvr <- (empresjurosfx * 5 / 100) + empresjurosfx
           senao
-            se (parcela >= 10) ou (parcela <= 12) entao
-               empresjurosvr  <- (vparcela * 10 / 100) + empresjurosfx
+            se (parcela >= 10) e (parcela <= 12) entao
+               empresjurosvr  <- (empresjurosfx * 10 / 100) + empresjurosfx
             senao
                escreval("Número de parcelas inválido")
             fimse
